@@ -3,7 +3,9 @@ import path from "path";
 import { prisma, checkDbConnection } from "./db";
 import { ResumeData, ThemeConfig } from "./store";
 
-const MOCK_DB_PATH = path.join(process.cwd(), "resumes-db.json");
+const MOCK_DB_PATH = process.env.VERCEL
+  ? path.join("/tmp", "resumes-db.json")
+  : path.join(process.cwd(), "resumes-db.json");
 
 export interface StoredResume {
   id: string;
