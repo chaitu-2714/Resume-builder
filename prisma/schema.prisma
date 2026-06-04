@@ -1,0 +1,51 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id // Clerk user ID
+  email     String   @unique
+  name      String?
+  resumes   Resume[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Resume {
+  id             String        @id @default(uuid())
+  title          String
+  userId         String
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  templateId     String        @default("nova")
+  templateType   String?       // Category of template
+  userType       String?       // Student, Fresher, Experienced, Switcher
+  themeConfig    Json?         // Custom colors, fonts, margins
+  data           Json          // Detailed resume JSON
+  versionHistory Json?         // Array of previous revisions
+  resumeScore    Int?          // Analyzed ATS/Overall score
+  analysis       Json?         // Missing skills, weak sections, etc.
+  resumeDNA      Json?         // Leadership, Tech depth, Collaboration metrics
+  skillGap       Json?         // Actionable feedback on missing skills
+  applications   Application[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model Application {
+  id             String   @id @default(uuid())
+  company        String
+  position       String
+  status         String   @default("applied") // applied, interviewing, offered, rejected
+  dateApplied    DateTime @default(now())
+  resumeId       String?
+  resume         Resume?  @relation(fields: [resumeId], references: [id], onDelete: SetNull)
+  jobDescription String?
+  matchScore     Int?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}

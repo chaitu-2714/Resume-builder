@@ -1,0 +1,658 @@
+{
+  "resumes": [
+    {
+      "id": "tjp1nuk-xmx3t55",
+      "title": "Fresher Resume",
+      "userId": "local_user_default",
+      "templateId": "modern",
+      "themeConfig": {
+        "primaryColor": "#0f172a",
+        "accentColor": "#6366f1",
+        "fontFamily": "Inter",
+        "fontSize": "12px",
+        "lineHeight": "1.4"
+      },
+      "data": {
+        "personalInfo": {
+          "fullName": "chaitanya",
+          "email": "chaitanyadabbeeru09@gmail.com",
+          "phone": "23332121232122",
+          "location": "vizag,andhrapradesh",
+          "website": "https//,chaity.dev",
+          "linkedin": "linkedin.com//chaitu",
+          "github": "",
+          "summary": "Results-driven Software Professional with a proven track record of designing, building, and deploying robust software systems. Adept in leveraging cutting-edge technologies to solve complex engineering challenges, optimize system architectures, and deliver high-value products. Passionate about driving engineering excellence and collaborating across cross-functional teams to meet corporate objectives."
+        },
+        "education": [
+          {
+            "id": "fhfsfwj",
+            "school": "sathyabama university",
+            "degree": "B.E",
+            "field": "computer Science",
+            "year": "2023-2027",
+            "gpa": "8.0"
+          }
+        ],
+        "skills": {
+          "technical": [],
+          "soft": [],
+          "languages": []
+        },
+        "projects": [
+          {
+            "id": "zedarf6",
+            "name": "E-commerce",
+            "tech": "react js mongo db express js",
+            "description": "",
+            "link": "https.chaitu-271444 git.com"
+          }
+        ],
+        "experience": [],
+        "certifications": [],
+        "achievements": []
+      },
+      "versionHistory": [
+        {
+          "timestamp": "2026-06-04T12:13:24.185Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": "Results-driven Software Professional with a proven track record of designing, building, and deploying robust software systems. Adept in leveraging cutting-edge technologies to solve complex engineering challenges, optimize system architectures, and deliver high-value products. Passionate about driving engineering excellence and collaborating across cross-functional teams to meet corporate objectives."
+            },
+            "education": [
+              {
+                "id": "fhfsfwj",
+                "school": "sathyabama university",
+                "degree": "B.E",
+                "field": "computer Science",
+                "year": "2023-2027",
+                "gpa": "8.0"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "zedarf6",
+                "name": "E-commerce",
+                "tech": "react js mongo db express js",
+                "description": "",
+                "link": "https.chaitu-271444 git.com"
+              }
+            ],
+            "experience": [],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:13:25.357Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": "Results-driven Software Professional with a proven track record of designing, building, and deploying robust software systems. Adept in leveraging cutting-edge technologies to solve complex engineering challenges, optimize system architectures, and deliver high-value products. Passionate about driving engineering excellence and collaborating across cross-functional teams to meet corporate objectives."
+            },
+            "education": [
+              {
+                "id": "fhfsfwj",
+                "school": "sathyabama university",
+                "degree": "B.E",
+                "field": "computer Science",
+                "year": "2023-2027",
+                "gpa": "8.0"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "zedarf6",
+                "name": "E-commerce",
+                "tech": "react js mongo db express js",
+                "description": "",
+                "link": "https.chaitu-271444 git.com"
+              }
+            ],
+            "experience": [],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:14:53.082Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": "Results-driven Software Professional with a proven track record of designing, building, and deploying robust software systems. Adept in leveraging cutting-edge technologies to solve complex engineering challenges, optimize system architectures, and deliver high-value products. Passionate about driving engineering excellence and collaborating across cross-functional teams to meet corporate objectives."
+            },
+            "education": [
+              {
+                "id": "fhfsfwj",
+                "school": "sathyabama university",
+                "degree": "B.E",
+                "field": "computer Science",
+                "year": "2023-2027",
+                "gpa": "8.0"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "zedarf6",
+                "name": "E-commerce",
+                "tech": "react js mongo db express js",
+                "description": "",
+                "link": "https.chaitu-271444 git.com"
+              }
+            ],
+            "experience": [],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:14:54.762Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": "Results-driven Software Professional with a proven track record of designing, building, and deploying robust software systems. Adept in leveraging cutting-edge technologies to solve complex engineering challenges, optimize system architectures, and deliver high-value products. Passionate about driving engineering excellence and collaborating across cross-functional teams to meet corporate objectives."
+            },
+            "education": [
+              {
+                "id": "fhfsfwj",
+                "school": "sathyabama university",
+                "degree": "B.E",
+                "field": "computer Science",
+                "year": "2023-2027",
+                "gpa": "8.0"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "zedarf6",
+                "name": "E-commerce",
+                "tech": "react js mongo db express js",
+                "description": "",
+                "link": "https.chaitu-271444 git.com"
+              }
+            ],
+            "experience": [],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:14:55.989Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": "Results-driven Software Professional with a proven track record of designing, building, and deploying robust software systems. Adept in leveraging cutting-edge technologies to solve complex engineering challenges, optimize system architectures, and deliver high-value products. Passionate about driving engineering excellence and collaborating across cross-functional teams to meet corporate objectives."
+            },
+            "education": [
+              {
+                "id": "fhfsfwj",
+                "school": "sathyabama university",
+                "degree": "B.E",
+                "field": "computer Science",
+                "year": "2023-2027",
+                "gpa": "8.0"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "zedarf6",
+                "name": "E-commerce",
+                "tech": "react js mongo db express js",
+                "description": "",
+                "link": "https.chaitu-271444 git.com"
+              }
+            ],
+            "experience": [],
+            "certifications": [],
+            "achievements": []
+          }
+        }
+      ],
+      "createdAt": "2026-06-04T12:08:03.425Z",
+      "updatedAt": "2026-06-04T12:14:55.989Z"
+    },
+    {
+      "id": "aeazfns-axtw0kb",
+      "title": "Fresher Resume",
+      "userId": "local_user_default",
+      "templateId": "vanguard",
+      "templateType": "modern",
+      "userType": "student",
+      "resumeScore": 90,
+      "analysis": {
+        "missingSkills": [
+          "Production Experience",
+          "CI/CD Tools",
+          "Agile Methodologies"
+        ],
+        "weakSections": [],
+        "keywordOptimization": [
+          "KPIs",
+          "Metrics",
+          "Scale"
+        ],
+        "suggestions": [
+          "Incorporate more quantifiable achievements using the STAR methodology.",
+          "Add direct links to your project repositories to verify code quality."
+        ],
+        "improvementTips": [
+          "Quantify your experience bullets with metrics like % improvement, hours saved, or revenue generated.",
+          "Format dates and section headers consistently for cleaner visual parsing."
+        ]
+      },
+      "resumeDNA": {
+        "leadership": 40,
+        "technicalDepth": 55,
+        "collaboration": 60
+      },
+      "skillGap": {
+        "identifiedGaps": [
+          "Industry-grade deployment",
+          "Version control workflows",
+          "Testing practices"
+        ],
+        "actionableFeedback": "As a student, focus on building and deploying 2-3 robust full-stack projects. Host them live and add verification links. Highlight university leadership roles or group project coordination to build your collaboration metrics."
+      },
+      "themeConfig": {
+        "primaryColor": "#0f172a",
+        "accentColor": "#6366f1",
+        "fontFamily": "Inter",
+        "fontSize": "12px",
+        "lineHeight": "1.4"
+      },
+      "data": {
+        "personalInfo": {
+          "fullName": "chaitanya",
+          "email": "chaitanyadabbeeru09@gmail.com",
+          "phone": "23332121232122",
+          "location": "vizag,andhrapradesh",
+          "website": "https//,chaity.dev",
+          "linkedin": "linkedin.com//chaitu",
+          "github": "",
+          "summary": ""
+        },
+        "education": [
+          {
+            "id": "7lbdego",
+            "school": " bbbb",
+            "degree": " nnmmm",
+            "field": "nkjhgh",
+            "year": "2023-2028",
+            "gpa": "222222"
+          }
+        ],
+        "skills": {
+          "technical": [],
+          "soft": [],
+          "languages": []
+        },
+        "projects": [
+          {
+            "id": "r3yu10o",
+            "name": "fdhghytuh",
+            "tech": "bvbbnnj",
+            "description": ""
+          }
+        ],
+        "experience": [
+          {
+            "id": "tw4x4o5",
+            "title": "fghjnbvbb",
+            "company": "bvcbbb",
+            "duration": "vnn   bnb",
+            "bullets": [
+              "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+              "Implemented rigorous automated unit and integration testing workflows, bringing test coverage to 92% and reducing production bugs by 30%.",
+              "Streamlined CI/CD deployment pipelines on AWS/Vercel, cutting build-to-deploy release cycles from 45 minutes to less than 8 minutes.",
+              "?Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+              "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+              "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity."
+            ]
+          }
+        ],
+        "certifications": [],
+        "achievements": []
+      },
+      "versionHistory": [
+        {
+          "timestamp": "2026-06-04T12:47:08.688Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": ""
+            },
+            "education": [
+              {
+                "id": "7lbdego",
+                "school": " bbbb",
+                "degree": " nnmmm",
+                "field": "nkjhgh",
+                "year": "2023-2028",
+                "gpa": "222222"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "r3yu10o",
+                "name": "fdhghytuh",
+                "tech": "bvbbnnj",
+                "description": ""
+              }
+            ],
+            "experience": [
+              {
+                "id": "tw4x4o5",
+                "title": "fghjnbvbb",
+                "company": "bvcbbb",
+                "duration": "vnn   bnb",
+                "bullets": [
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Implemented rigorous automated unit and integration testing workflows, bringing test coverage to 92% and reducing production bugs by 30%.",
+                  "Streamlined CI/CD deployment pipelines on AWS/Vercel, cutting build-to-deploy release cycles from 45 minutes to less than 8 minutes.",
+                  "?",
+                  "",
+                  ""
+                ]
+              }
+            ],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:47:10.817Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": ""
+            },
+            "education": [
+              {
+                "id": "7lbdego",
+                "school": " bbbb",
+                "degree": " nnmmm",
+                "field": "nkjhgh",
+                "year": "2023-2028",
+                "gpa": "222222"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "r3yu10o",
+                "name": "fdhghytuh",
+                "tech": "bvbbnnj",
+                "description": ""
+              }
+            ],
+            "experience": [
+              {
+                "id": "tw4x4o5",
+                "title": "fghjnbvbb",
+                "company": "bvcbbb",
+                "duration": "vnn   bnb",
+                "bullets": [
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Implemented rigorous automated unit and integration testing workflows, bringing test coverage to 92% and reducing production bugs by 30%.",
+                  "Streamlined CI/CD deployment pipelines on AWS/Vercel, cutting build-to-deploy release cycles from 45 minutes to less than 8 minutes.",
+                  "?Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "",
+                  ""
+                ]
+              }
+            ],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:47:12.538Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": ""
+            },
+            "education": [
+              {
+                "id": "7lbdego",
+                "school": " bbbb",
+                "degree": " nnmmm",
+                "field": "nkjhgh",
+                "year": "2023-2028",
+                "gpa": "222222"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "r3yu10o",
+                "name": "fdhghytuh",
+                "tech": "bvbbnnj",
+                "description": ""
+              }
+            ],
+            "experience": [
+              {
+                "id": "tw4x4o5",
+                "title": "fghjnbvbb",
+                "company": "bvcbbb",
+                "duration": "vnn   bnb",
+                "bullets": [
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Implemented rigorous automated unit and integration testing workflows, bringing test coverage to 92% and reducing production bugs by 30%.",
+                  "Streamlined CI/CD deployment pipelines on AWS/Vercel, cutting build-to-deploy release cycles from 45 minutes to less than 8 minutes.",
+                  "?Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  ""
+                ]
+              }
+            ],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:47:22.793Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": ""
+            },
+            "education": [
+              {
+                "id": "7lbdego",
+                "school": " bbbb",
+                "degree": " nnmmm",
+                "field": "nkjhgh",
+                "year": "2023-2028",
+                "gpa": "222222"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "r3yu10o",
+                "name": "fdhghytuh",
+                "tech": "bvbbnnj",
+                "description": ""
+              }
+            ],
+            "experience": [
+              {
+                "id": "tw4x4o5",
+                "title": "fghjnbvbb",
+                "company": "bvcbbb",
+                "duration": "vnn   bnb",
+                "bullets": [
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Implemented rigorous automated unit and integration testing workflows, bringing test coverage to 92% and reducing production bugs by 30%.",
+                  "Streamlined CI/CD deployment pipelines on AWS/Vercel, cutting build-to-deploy release cycles from 45 minutes to less than 8 minutes.",
+                  "?Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity."
+                ]
+              }
+            ],
+            "certifications": [],
+            "achievements": []
+          }
+        },
+        {
+          "timestamp": "2026-06-04T12:47:24.456Z",
+          "data": {
+            "personalInfo": {
+              "fullName": "chaitanya",
+              "email": "chaitanyadabbeeru09@gmail.com",
+              "phone": "23332121232122",
+              "location": "vizag,andhrapradesh",
+              "website": "https//,chaity.dev",
+              "linkedin": "linkedin.com//chaitu",
+              "github": "",
+              "summary": ""
+            },
+            "education": [
+              {
+                "id": "7lbdego",
+                "school": " bbbb",
+                "degree": " nnmmm",
+                "field": "nkjhgh",
+                "year": "2023-2028",
+                "gpa": "222222"
+              }
+            ],
+            "skills": {
+              "technical": [],
+              "soft": [],
+              "languages": []
+            },
+            "projects": [
+              {
+                "id": "r3yu10o",
+                "name": "fdhghytuh",
+                "tech": "bvbbnnj",
+                "description": ""
+              }
+            ],
+            "experience": [
+              {
+                "id": "tw4x4o5",
+                "title": "fghjnbvbb",
+                "company": "bvcbbb",
+                "duration": "vnn   bnb",
+                "bullets": [
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Implemented rigorous automated unit and integration testing workflows, bringing test coverage to 92% and reducing production bugs by 30%.",
+                  "Streamlined CI/CD deployment pipelines on AWS/Vercel, cutting build-to-deploy release cycles from 45 minutes to less than 8 minutes.",
+                  "?Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity.",
+                  "Led execution and deployment of scalable software systems as a fghjnbvbb, contributing to a 20% increase in team development velocity."
+                ]
+              }
+            ],
+            "certifications": [],
+            "achievements": []
+          }
+        }
+      ],
+      "createdAt": "2026-06-04T12:43:35.622Z",
+      "updatedAt": "2026-06-04T12:47:24.456Z"
+    }
+  ],
+  "users": []
+}
