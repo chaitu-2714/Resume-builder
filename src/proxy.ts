@@ -11,20 +11,24 @@ const isProtectedRoute = createRouteMatcher([
   '/resume-builder(.*)',
 ]);
 
-export default clerkMiddleware(async (auth, req) => {
-  if (isClerkConfigured) {
-    try {
-      if (isProtectedRoute(req)) {
-        const { userId, redirectToSignIn } = await auth();
-        if (!userId) {
-          return redirectToSignIn();
+async function fallbackProxy() {
+  return NextResponse.next();
+}
+
+export default isClerkConfigured
+  ? clerkMiddleware(async (auth, req) => {
+      try {
+        if (isProtectedRoute(req)) {
+          const { userId, redirectToSignIn } = await auth();
+          if (!userId) {
+            return redirectToSignIn();
+          }
         }
+      } catch (e) {
+        console.warn("Clerk proxy execution failed:", e);
       }
-    } catch (e) {
-      console.warn("Clerk proxy execution failed:", e);
-    }
-  }
-});
+    })
+  : fallbackProxy;
 
 export const config = {
   matcher: [

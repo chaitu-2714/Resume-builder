@@ -5,7 +5,29 @@ import { UserButton, useUser } from "@clerk/nextjs";
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
 
+const isClerkConfigured = 
+  !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
 export function AuthButton() {
+  if (!isClerkConfigured) {
+    // Mock authenticated dashboard button or login link
+    return (
+      <div className="flex items-center gap-2">
+        <Link href="/dashboard">
+          <button className="flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-lg bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:opacity-90 transition-all duration-200 shadow-lg shadow-indigo-500/20">
+            <Sparkles className="h-3.5 w-3.5" />
+            <span>Go to Dashboard</span>
+          </button>
+        </Link>
+      </div>
+    );
+  }
+
+  // If Clerk is configured, use the real Clerk hooks
+  return <ClerkAuthButton />;
+}
+
+function ClerkAuthButton() {
   const { user, isSignedIn, isLoaded } = useUser();
 
   if (!isLoaded) {

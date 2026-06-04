@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkMockProvider } from "@/components/auth/ClerkMockProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkMockProvider>
       <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
         <body className="h-full bg-[#05050a] text-slate-100 flex flex-col antialiased" suppressHydrationWarning>
           {children}
         </body>
       </html>
-    </ClerkProvider>
+    </ClerkMockProvider>
   );
 }
