@@ -91,7 +91,7 @@ export default function DashboardPage() {
 
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-[#05050a] relative">
-      <header className="h-16 border-b border-slate-900/60 bg-slate-950/30 backdrop-blur-md px-6 md:px-12 flex items-center justify-between z-10">
+      <header className="h-16 border-b border-slate-900/60 bg-slate-950/30 backdrop-blur-md px-6 md:px-12 flex items-center justify-between z-20">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => router.push("/")}>
           <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">
             ✦

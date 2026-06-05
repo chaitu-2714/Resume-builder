@@ -13,7 +13,7 @@ export default function ResumeBuilderPage({ params }: { params: Promise<{ id: st
   return (
     <div className="flex flex-col h-screen overflow-hidden bg-[#05050a]">
       {/* Editor Header */}
-      <header className="h-16 border-b border-slate-900 bg-slate-950/80 backdrop-blur-md px-6 flex items-center justify-between z-10 shrink-0">
+      <header className="h-16 border-b border-slate-900 bg-slate-950/80 backdrop-blur-md px-6 flex items-center justify-between z-20 shrink-0">
         <div className="flex items-center gap-3">
           <button 
             onClick={() => router.push("/dashboard")}

@@ -44,7 +44,7 @@ function ProfileLayout({ id, name, email, avatarUrl, provider, createdAt, handle
       <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] rounded-full bg-indigo-500/5 blur-[120px]" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] rounded-full bg-purple-500/5 blur-[120px]" />
 
-      <header className="h-16 border-b border-slate-900/60 bg-slate-950/30 backdrop-blur-md px-6 md:px-12 flex items-center justify-between z-10">
+      <header className="h-16 border-b border-slate-900/60 bg-slate-950/30 backdrop-blur-md px-6 md:px-12 flex items-center justify-between z-20">
         <div className="flex items-center gap-2 cursor-pointer" onClick={() => router.push("/dashboard")}>
           <div className="h-8 w-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/20">
             ✦
