@@ -11,7 +11,17 @@ const isProtectedRoute = createRouteMatcher([
   '/resume-builder(.*)',
 ]);
 
-async function fallbackProxy() {
+async function fallbackProxy(req: NextRequest) {
+  try {
+    if (isProtectedRoute(req)) {
+      const mockUserId = req.cookies.get("mock_user_id")?.value;
+      if (!mockUserId) {
+        return NextResponse.redirect(new URL("/login", req.url));
+      }
+    }
+  } catch (e) {
+    console.warn("Fallback proxy execution failed:", e);
+  }
   return NextResponse.next();
 }
 
@@ -29,6 +39,7 @@ export default isClerkConfigured
       }
     })
   : fallbackProxy;
+
 
 export const config = {
   matcher: [

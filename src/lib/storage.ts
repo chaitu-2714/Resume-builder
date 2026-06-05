@@ -59,8 +59,8 @@ export async function getResumes(userId: string): Promise<any[]> {
         where: { userId },
         orderBy: { updatedAt: "desc" },
       });
-    } catch (e) {
-      console.warn("Prisma getResumes failed, falling back to local storage.", e);
+    } catch (e: any) {
+      console.warn("Prisma getResumes failed, falling back to local storage. Message:", e?.message || e);
     }
   }
 
@@ -79,8 +79,8 @@ export async function getResumeById(id: string): Promise<any | null> {
       return await prisma.resume.findUnique({
         where: { id },
       });
-    } catch (e) {
-      console.warn("Prisma getResumeById failed, falling back to local storage.", e);
+    } catch (e: any) {
+      console.warn("Prisma getResumeById failed, falling back to local storage. Message:", e?.message || e);
     }
   }
 
@@ -158,8 +158,8 @@ export async function createResume(
           versionHistory: [] as any,
         },
       });
-    } catch (e) {
-      console.warn("Prisma createResume failed, falling back to local storage.", e);
+    } catch (e: any) {
+      console.warn("Prisma createResume failed, falling back to local storage. Message:", e?.message || e);
     }
   }
 
@@ -212,8 +212,8 @@ export async function updateResume(
           versionHistory: updatedHistory as any,
         },
       });
-    } catch (e) {
-      console.warn("Prisma updateResume failed, falling back to local storage.", e);
+    } catch (e: any) {
+      console.warn("Prisma updateResume failed, falling back to local storage. Message:", e?.message || e);
     }
   }
 
@@ -261,8 +261,8 @@ export async function deleteResume(id: string): Promise<boolean> {
         where: { id },
       });
       return true;
-    } catch (e) {
-      console.warn("Prisma deleteResume failed, falling back to local storage.", e);
+    } catch (e: any) {
+      console.warn("Prisma deleteResume failed, falling back to local storage. Message:", e?.message || e);
     }
   }
 

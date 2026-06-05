@@ -20,8 +20,9 @@ export async function checkDbConnection(): Promise<boolean> {
     // Quick query to verify database is reachable
     await prisma.$queryRaw`SELECT 1`;
     return true;
-  } catch (error) {
-    console.warn("Database connection failed, using mock layer. Error:", error);
+  } catch (error: any) {
+    console.warn("Database connection failed, using mock layer. Message:", error?.message || error);
     return false;
   }
+
 }

@@ -1,10 +1,16 @@
 import { NextResponse } from "next/server";
+import { getAuthUserId } from "@/lib/auth";
 import { getResumeById } from "@/lib/storage";
 import { generateDocx, generatePdf } from "@/lib/export";
 
 // POST /api/export
 export async function POST(req: Request) {
   try {
+    const userId = await getAuthUserId();
+    if (!userId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const body = await req.json().catch(() => ({}));
     const { resumeId, format } = body;
 
@@ -16,6 +22,11 @@ export async function POST(req: Request) {
     if (!resume) {
       return NextResponse.json({ error: "Resume not found" }, { status: 404 });
     }
+
+    if (resume.userId !== userId) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+
 
     if (format === "docx") {
       const buffer = await generateDocx(resume.data);

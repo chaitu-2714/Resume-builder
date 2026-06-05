@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getAuthUserId } from "@/lib/auth";
 import {
   generateSummary,
   generateBullets,
@@ -13,8 +14,14 @@ import {
 // POST /api/ai
 export async function POST(req: Request) {
   try {
+    const userId = await getAuthUserId();
+    if (!userId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const body = await req.json().catch(() => ({}));
     const { task } = body;
+
 
     if (!task) {
       return NextResponse.json({ error: "Task parameter is required" }, { status: 400 });
