@@ -9,6 +9,7 @@ const isClerkConfigured =
 const isProtectedRoute = createRouteMatcher([
   '/dashboard(.*)',
   '/resume-builder(.*)',
+  '/profile(.*)',
 ]);
 
 async function fallbackProxy(req: NextRequest) {

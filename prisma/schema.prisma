@@ -11,6 +11,8 @@ model User {
   id        String   @id // Clerk user ID
   email     String   @unique
   name      String?
+  imageUrl  String?  // Profile Image
+  provider  String?  // Authentication Provider (e.g. google, apple, clerk, local)
   resumes   Resume[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

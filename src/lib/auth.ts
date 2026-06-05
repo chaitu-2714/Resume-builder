@@ -24,11 +24,13 @@ export async function getAuthUserId(): Promise<string | null> {
               const userDetails = await currentUser();
               const email = userDetails?.emailAddresses?.[0]?.emailAddress || `${userId}@clerk.com`;
               const name = userDetails ? `${userDetails.firstName || ""} ${userDetails.lastName || ""}`.trim() : "Clerk User";
+              const imageUrl = userDetails?.imageUrl || null;
+              const provider = userDetails?.externalAccounts?.[0]?.provider || "clerk";
               
               await prisma.user.upsert({
                 where: { id: userId },
-                update: { email, name },
-                create: { id: userId, email, name },
+                update: { email, name, imageUrl, provider },
+                create: { id: userId, email, name, imageUrl, provider },
               });
             }
           } catch (dbError) {
@@ -55,10 +57,13 @@ export async function getAuthUserId(): Promise<string | null> {
         try {
           const mockEmail = cookieStore.get("mock_user_email")?.value || `${mockUserId}@mock.com`;
           const mockName = cookieStore.get("mock_user_name")?.value || "Local User";
+          const mockAvatar = cookieStore.get("mock_user_avatar_url")?.value || null;
+          const mockProvider = mockUserId.startsWith("mock_google_") ? "google" : mockUserId.startsWith("mock_apple_") ? "apple" : "local";
+          
           await prisma.user.upsert({
             where: { id: mockUserId },
-            update: { email: mockEmail, name: mockName },
-            create: { id: mockUserId, email: mockEmail, name: mockName },
+            update: { email: mockEmail, name: mockName, imageUrl: mockAvatar, provider: mockProvider },
+            create: { id: mockUserId, email: mockEmail, name: mockName, imageUrl: mockAvatar, provider: mockProvider },
           });
         } catch (dbError) {
           console.error("Failed to sync mock user to database:", dbError);
@@ -69,6 +74,7 @@ export async function getAuthUserId(): Promise<string | null> {
   } catch (e) {
     console.warn("Failed to read mock cookies on server:", e);
   }
+
 
   return null;
 }

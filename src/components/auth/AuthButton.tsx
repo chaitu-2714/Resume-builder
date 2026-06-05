@@ -129,6 +129,14 @@ export function AuthButton() {
                 )}
               </div>
               
+              <Link
+                href="/profile"
+                className="w-full flex items-center gap-1.5 text-left text-xs text-slate-300 hover:bg-slate-900 hover:text-white font-semibold px-3 py-2 rounded-lg transition-smooth mb-0.5"
+              >
+                <UserIcon className="h-3.5 w-3.5 text-slate-500" />
+                <span>View Profile</span>
+              </Link>
+
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="w-full flex items-center gap-1.5 text-left text-xs text-slate-300 hover:bg-slate-900 hover:text-white font-semibold px-3 py-2 rounded-lg transition-smooth mb-0.5"
@@ -298,7 +306,6 @@ export function AuthButton() {
 function ClerkAuthButton() {
   const { user, isSignedIn, isLoaded } = useUser();
 
-
   if (!isLoaded) {
     return <div className="h-8 w-8 rounded-full bg-slate-800 animate-pulse" />;
   }
@@ -306,6 +313,10 @@ function ClerkAuthButton() {
   if (isSignedIn) {
     return (
       <div className="flex items-center gap-3">
+        <Link href="/profile" className="text-xs text-slate-400 hover:text-indigo-400 transition-smooth">
+          Profile
+        </Link>
+        <div className="h-4 w-px bg-slate-900" />
         <span className="text-xs text-slate-400 hidden md:inline">
           Welcome, {user?.firstName || "there"}
         </span>
@@ -319,6 +330,7 @@ function ClerkAuthButton() {
       </div>
     );
   }
+
 
   return (
     <div className="flex items-center gap-2">
