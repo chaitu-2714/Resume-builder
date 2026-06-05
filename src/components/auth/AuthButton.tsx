@@ -14,6 +14,8 @@ export function AuthButton() {
   const [user, setUser] = useState<{ id: string; name: string; email: string; avatarUrl: string } | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
 
   // Form states
   const [editName, setEditName] = useState("");
@@ -49,6 +51,20 @@ export function AuthButton() {
     }
     setIsLoaded(true);
   }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
 
   const handleLogout = () => {
     document.cookie = "mock_user_id=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/;";
@@ -101,8 +117,11 @@ export function AuthButton() {
           <span className="text-xs text-slate-400 hidden md:inline">
             Welcome, {user.name.split(" ")[0]}
           </span>
-          <div className="relative group">
-            <button className="h-8 w-8 rounded-lg overflow-hidden border border-indigo-500/30 flex items-center justify-center font-bold text-xs text-indigo-400 bg-indigo-600/10 shadow-md">
+          <div className="relative" ref={dropdownRef}>
+            <button 
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="h-8 w-8 rounded-lg overflow-hidden border border-indigo-500/30 flex items-center justify-center font-bold text-xs text-indigo-400 bg-indigo-600/10 shadow-md outline-none"
+            >
               {user.avatarUrl ? (
                 <img src={user.avatarUrl} alt={user.name} className="h-full w-full object-cover" />
               ) : (
@@ -110,8 +129,14 @@ export function AuthButton() {
               )}
             </button>
             
-            {/* Hover Dropdown */}
-            <div className="absolute right-0 top-full mt-2 w-52 rounded-xl border border-slate-900 bg-slate-950 p-2 shadow-xl opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 z-50">
+            {/* Dropdown Menu */}
+            <div 
+              className={`absolute right-0 top-full mt-2 w-52 rounded-xl border border-slate-900 bg-slate-950 p-2 shadow-xl transition-all duration-200 z-50 ${
+                isDropdownOpen 
+                  ? "opacity-100 translate-y-0 pointer-events-auto" 
+                  : "opacity-0 translate-y-1 pointer-events-none"
+              }`}
+            >
               <div className="px-3 py-2 border-b border-slate-900/60 mb-1">
                 <p className="text-xs font-bold text-slate-200 truncate">{user.name}</p>
                 <p className="text-[10px] text-slate-500 truncate">{user.email}</p>
@@ -131,6 +156,7 @@ export function AuthButton() {
               
               <Link
                 href="/profile"
+                onClick={() => setIsDropdownOpen(false)}
                 className="w-full flex items-center gap-1.5 text-left text-xs text-slate-300 hover:bg-slate-900 hover:text-white font-semibold px-3 py-2 rounded-lg transition-smooth mb-0.5"
               >
                 <UserIcon className="h-3.5 w-3.5 text-slate-500" />
@@ -138,7 +164,10 @@ export function AuthButton() {
               </Link>
 
               <button
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => {
+                  setIsDropdownOpen(false);
+                  setIsModalOpen(true);
+                }}
                 className="w-full flex items-center gap-1.5 text-left text-xs text-slate-300 hover:bg-slate-900 hover:text-white font-semibold px-3 py-2 rounded-lg transition-smooth mb-0.5"
               >
                 <Settings className="h-3.5 w-3.5 text-slate-500" />
@@ -146,7 +175,10 @@ export function AuthButton() {
               </button>
 
               <button
-                onClick={handleLogout}
+                onClick={() => {
+                  setIsDropdownOpen(false);
+                  handleLogout();
+                }}
                 className="w-full flex items-center gap-1.5 text-left text-xs text-rose-400 hover:bg-rose-500/5 hover:text-rose-300 font-semibold px-3 py-2 rounded-lg transition-smooth"
               >
                 <LogOut className="h-3.5 w-3.5" />
