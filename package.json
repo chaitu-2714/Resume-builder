@@ -10,13 +10,13 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
-    "@clerk/nextjs": "^7.4.3",
     "@hookform/resolvers": "^5.4.0",
     "@prisma/client": "^5.22.0",
     "@react-pdf/renderer": "^4.5.1",
     "bullmq": "^5.78.0",
     "clsx": "^2.1.1",
     "docx": "^9.7.1",
+    "firebase": "^12.14.0",
     "framer-motion": "^12.40.0",
     "ioredis": "^5.11.1",
     "lucide-react": "^1.17.0",

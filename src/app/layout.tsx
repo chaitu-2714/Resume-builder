@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ClerkMockProvider } from "@/components/auth/ClerkMockProvider";
+import { FirebaseAuthProvider } from "@/components/auth/FirebaseAuthContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,12 +20,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkMockProvider>
+    <FirebaseAuthProvider>
       <html lang="en" className="h-full scroll-smooth" suppressHydrationWarning>
         <body className="h-full bg-[#05050a] text-slate-100 flex flex-col antialiased" suppressHydrationWarning>
           {children}
         </body>
       </html>
-    </ClerkMockProvider>
+    </FirebaseAuthProvider>
   );
 }

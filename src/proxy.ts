@@ -1,52 +1,39 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
-const isClerkConfigured =
-  !!process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY &&
-  !!process.env.CLERK_SECRET_KEY;
+const PROTECTED_ROUTES = [
+  "/dashboard",
+  "/resume-builder",
+  "/profile"
+];
 
-const isProtectedRoute = createRouteMatcher([
-  '/dashboard(.*)',
-  '/resume-builder(.*)',
-  '/profile(.*)',
-]);
+export default function proxy(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-async function fallbackProxy(req: NextRequest) {
-  try {
-    if (isProtectedRoute(req)) {
-      const mockUserId = req.cookies.get("mock_user_id")?.value;
-      if (!mockUserId) {
-        return NextResponse.redirect(new URL("/login", req.url));
-      }
+  const isProtected = PROTECTED_ROUTES.some(route => 
+    pathname === route || pathname.startsWith(route + "/")
+  );
+
+  if (isProtected) {
+    const userId = req.cookies.get("mock_user_id")?.value;
+    if (!userId) {
+      return NextResponse.redirect(new URL("/login", req.url));
     }
-  } catch (e) {
-    console.warn("Fallback proxy execution failed:", e);
   }
+
   return NextResponse.next();
 }
 
-export default isClerkConfigured
-  ? clerkMiddleware(async (auth, req) => {
-      try {
-        if (isProtectedRoute(req)) {
-          const { userId, redirectToSignIn } = await auth();
-          if (!userId) {
-            return redirectToSignIn();
-          }
-        }
-      } catch (e) {
-        console.warn("Clerk proxy execution failed:", e);
-      }
-    })
-  : fallbackProxy;
-
-
 export const config = {
   matcher: [
-    // Skip Next.js internals and all static files
-    '/((?!_next|[^?]*\\.(?:html|css|js|gif|svg|png|webp|jpg|jpeg|curl|ico|csv|docx|pdf|xlsx|zip|webmanifest)).*)',
-    // Always run for API routes
-    '/(api|trpc)(.*)',
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - static assets (.svg, .png, etc.)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|[^?]*\\.(?:html|css|js|gif|svg|png|webp|jpg|jpeg|curl|ico|csv|docx|pdf|xlsx|zip|webmanifest)).*)',
   ],
 };
